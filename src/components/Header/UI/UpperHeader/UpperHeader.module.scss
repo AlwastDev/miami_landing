@@ -1,0 +1,33 @@
+$burgerIcon: url('/public/burgerMenuIcon.svg');
+$phoneIcon: url('/public/phoneIcon.svg');
+$logoMiami: url('/public/logoMiami.svg');
+
+.upperHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.burgerButton {
+  background-color: transparent;
+  border: none;
+  appearance: none;
+  background-image: $burgerIcon;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+
+.logoImg {
+  content: $logoMiami;
+}
+
+.phoneButton {
+  background-color: transparent;
+  border: none;
+  appearance: none;
+  background-image: $phoneIcon;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}

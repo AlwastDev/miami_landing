@@ -1,0 +1,17 @@
+@import "src/static/colors.scss";
+
+$coronaIcon: url('/public/coronaIcon.svg');
+
+.coronaIcon {
+  content: $coronaIcon;
+}
+
+h2 {
+  color: $black;
+  font-family: Roboto, sans-serif;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 48px;
+  letter-spacing: -1.5px;
+}
