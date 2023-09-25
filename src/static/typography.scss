@@ -1,0 +1,47 @@
+@mixin typography-style() {
+  font-family: Roboto, sans-serif;
+}
+
+@mixin h1 {
+  @include typography-style();
+  font-size: 80px;
+  font-weight: 700;
+  line-height: 80px;
+  letter-spacing: -1.5px;
+}
+
+@mixin h2 {
+  @include typography-style();
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 48px;
+  letter-spacing: -1.5px;
+}
+
+@mixin h3 {
+  @include typography-style();
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 30px;
+}
+
+@mixin body {
+  @include typography-style();
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 27px;
+}
+
+@mixin bodyBold {
+  @include typography-style();
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 27px;
+}
+
+@mixin small {
+  @include typography-style();
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 27px;
+}

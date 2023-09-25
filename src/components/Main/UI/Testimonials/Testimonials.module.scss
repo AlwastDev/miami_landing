@@ -1,4 +1,5 @@
 @import "src/static/colors.scss";
+@import "src/static/typography.scss";
 
 $photo1: url('/public/photos/photo1.png');
 $photo2: url('/public/photos/photo2.png');
@@ -27,35 +28,23 @@ img {
   content: $photo3;
 }
 
-h4 {
+.title {
+  @include h3();
   margin-top: 32px;
   text-align: center;
   color: $blue;
-  font-family: Roboto, sans-serif;
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 30px;
 }
 
 .positionText {
+  @include small();
   margin: 4px 0 4px 0;
   color: $grayLight;
   text-align: center;
-  font-family: Roboto, sans-serif;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 27px;
 }
 
 .descriptionText {
+  @include body();
   color: $gray;
   text-align: center;
-  font-family: Roboto, sans-serif;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 27px;
 }
 

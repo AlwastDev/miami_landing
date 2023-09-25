@@ -7,13 +7,13 @@ const BasicInformation = () => {
       <Container>
         <div className={styles.contentWrapper}>
           <div className={styles.content}>
-            <h3 className={styles.textLeft}>
+            <h2 className={styles.textLeft}>
               Miami best <br /> Real estate <br />
               <span>here</span>
-            </h3>
+            </h2>
           </div>
           <div className={styles.content}>
-            <h3 className={styles.textRightUpper}>Over 50 years experience in love.</h3>
+            <h3 className={styles.textRightUpper}>Over 50 years experience in love.</h3><br/>
             <p className={styles.textRightLower}>
               Mazel and VA Tsukkerman in his "Analysis of musical works." Pointillism, which originated in the music of
               the early twentieth century, microforms, found a distant historical. <br />

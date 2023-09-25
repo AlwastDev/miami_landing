@@ -1,4 +1,5 @@
 @import 'src/static/colors.scss';
+@import 'src/static/typography.scss';
 
 .contentWrapper {
   display: flex;
@@ -10,13 +11,8 @@
 }
 
 .textLeft {
+  @include h2();
   color: $black;
-  font-family: Roboto, sans-serif;
-  font-size: 48px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 48px;
-  letter-spacing: -1.5px;
 
   span {
     color: $blue;
@@ -24,20 +20,11 @@
 }
 
 .textRightUpper {
+  @include h3();
   color: $blue;
-  font-family: Roboto, sans-serif;
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 30px;
-  margin-bottom: 16px;
 }
 
 .textRightLower {
+  @include body();
   color: $gray;
-  font-family: Roboto, sans-serif;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 27px;
 }
