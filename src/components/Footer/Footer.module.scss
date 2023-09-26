@@ -1,0 +1,20 @@
+$background: url('/public/bgFooterMiami.jpg');
+$logoMiami: url('/public/logoMiami.svg');
+
+.footer {
+  background-image: $background;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  height: 359px;
+  margin-top: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+
+  &__logo {
+    content: $logoMiami;
+    margin-bottom: 32px;
+  }
+}

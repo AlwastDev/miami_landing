@@ -1,5 +1,79 @@
-.container {
+@import 'src/static/colors.scss';
+@import 'src/static/typography.scss';
+
+@mixin input-styles {
+  @include small();
+  border: transparent;
+  border-radius: 8px;
+  padding: 14px 0 14px 17px;
+  background: $grayLight2;
+  color: $grayDark;
+  height: 48px;
+}
+
+.contactUs {
   max-width: 1020px;
   margin: 0 auto;
-  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 111px;
+
+  &__section {
+    text-align: left;
+
+    &Title {
+      @include small();
+      color: $grayLight;
+    }
+
+    &Text {
+      @include body();
+      color: $gray;
+    }
+  }
+
+  &__leftContent {
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+
+    &__email {
+      margin-top: 24px;
+    }
+  }
+
+  &__rightContent {
+    display: grid;
+    grid-row-gap: 16px;
+    width: 411px;
+
+    &__nameInput {
+      @include input-styles;
+    }
+
+    &__emailInput {
+      @include input-styles;
+    }
+
+    &__messageTextArea {
+      @include small();
+      border: transparent;
+      border-radius: 8px;
+      padding: 14px 0 0 17px;
+      background: $grayLight2;
+      color: $grayDark;
+      height: 144px;
+      resize: none;
+    }
+
+    &__consultationButton {
+      @include bodyBold();
+      border: transparent;
+      height: 56px;
+      border-radius: 8px;
+      background: $blueLight;
+      color: $white;
+      cursor: pointer;
+    }
+  }
 }

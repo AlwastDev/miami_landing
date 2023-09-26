@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './global.css';
-import { Main, Header } from './components';
+import { Footer, Header, Main } from './components';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <Header />
     <Main />
-    <footer></footer>
+    <Footer />
   </React.StrictMode>,
 );

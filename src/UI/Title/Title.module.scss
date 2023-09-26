@@ -5,6 +5,7 @@ $coronaIcon: url('/public/coronaIcon.svg');
 
 .title {
   text-align: center;
+  margin-bottom: 56px;
 
   &__icon {
     content: $coronaIcon;

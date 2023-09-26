@@ -28,7 +28,7 @@ $gallery6: url('/public/gallery/gallery6.jpeg');
   text-align: center;
 
   &__row1 {
-    @include gallery-styles(2fr 1fr, 56px);
+    @include gallery-styles(2fr 1fr, 0);
   }
 
   &__row2 {
