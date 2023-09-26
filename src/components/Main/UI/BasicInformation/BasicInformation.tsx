@@ -1,34 +1,31 @@
-import { Container } from '../../../../UI';
 import styles from './BasicInformation.module.scss';
 
 const BasicInformation = () => {
   return (
     <section>
-      <Container>
-        <div className={styles.contentWrapper}>
-          <div className={styles.content}>
-            <h2 className={styles.textLeft}>
-              Miami best <br /> Real estate <br />
-              <span>here</span>
-            </h2>
-          </div>
-          <div className={styles.content}>
-            <h3 className={styles.textRightUpper}>Over 50 years experience in love.</h3><br/>
-            <p className={styles.textRightLower}>
-              Mazel and VA Tsukkerman in his "Analysis of musical works." Pointillism, which originated in the music of
-              the early twentieth century, microforms, found a distant historical. <br />
-              <br /> The market leader in real estate since 2003. Awards Real Estate Company, 2010, 2011, 2013. More
-              than 200 satisfied customers premium segment. We focus only on new buildings and high-level doskanalno
-              know this area better than other specialists.
-              <br /> Working directly with developers - so have more useful information about the profitable deals.{' '}
-              <br /> <br />{' '}
-              <b>
-                We will never be late! <br /> Guaranteed secure transaction - 100%
-              </b>
-            </p>
-          </div>
+      <div className={styles.basicInformation}>
+        <div className={styles.basicInformation__leftContent}>
+          <h2 className={styles.basicInformation__mainTitle}>
+            Miami's Finest <br /> Real Estate <br />
+            <span>Here</span>
+          </h2>
         </div>
-      </Container>
+        <div className={styles.basicInformation__rightContent}>
+          <h3 className={styles.basicInformation__subTitle}>Over 50 Years of Expertise in Real Estate</h3>
+          <br />
+          <p className={styles.basicInformation__description}>
+            Mazel and VA Tsukkerman in his "Analysis of musical works." Pointillism, which originated in the music of
+            the early twentieth century, microforms, found a distant historical. <br />
+            <br /> The market leader in real estate since 2003. Awards Real Estate Company, 2010, 2011, 2013. More than
+            200 satisfied customers in the premium segment. We focus exclusively on new developments and have
+            unparalleled expertise in this area. <br /> Working directly with developers allows us to provide you with
+            the most up-to-date and profitable deals. <br /> <br />{' '}
+            <b>
+              We are always on time! <br /> Guaranteed Secure Transactions - 100%
+            </b>
+          </p>
+        </div>
+      </div>
     </section>
   );
 };

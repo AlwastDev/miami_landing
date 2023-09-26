@@ -1,11 +1,12 @@
-import { Container, Title } from '../../../../UI';
+import styles from './ContactUs.module.scss';
+import { Title } from '../../../../UI';
 
 const ContactUs = () => {
   return (
     <section>
-      <Container>
+      <div className={styles.container}>
         <Title text={'Contact Us'} />
-      </Container>
+      </div>
     </section>
   );
 };

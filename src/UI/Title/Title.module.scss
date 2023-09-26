@@ -3,11 +3,15 @@
 
 $coronaIcon: url('/public/coronaIcon.svg');
 
-.coronaIcon {
-  content: $coronaIcon;
-}
+.title {
+  text-align: center;
 
-.secondText {
-  @include h2();
-  color: $black;
+  &__icon {
+    content: $coronaIcon;
+  }
+
+  &__text {
+    @include h2();
+    color: $black;
+  }
 }

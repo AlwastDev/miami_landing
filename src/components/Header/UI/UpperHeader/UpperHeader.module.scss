@@ -2,32 +2,31 @@ $burgerIcon: url('/public/burgerMenuIcon.svg');
 $phoneIcon: url('/public/phoneIcon.svg');
 $logoMiami: url('/public/logoMiami.svg');
 
+@mixin button-styles() {
+  background-color: transparent;
+  border: none;
+  appearance: none;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+
 .upperHeader {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
 
-.burgerButton {
-  background-color: transparent;
-  border: none;
-  appearance: none;
-  background-image: $burgerIcon;
-  width: 32px;
-  height: 32px;
-  cursor: pointer;
-}
+  &__burgerButton {
+    @include button-styles();
+    background-image: $burgerIcon;
+  }
 
-.logoImg {
-  content: $logoMiami;
-}
+  &__logoImg {
+    content: $logoMiami;
+  }
 
-.phoneButton {
-  background-color: transparent;
-  border: none;
-  appearance: none;
-  background-image: $phoneIcon;
-  width: 32px;
-  height: 32px;
-  cursor: pointer;
+  &__phoneButton {
+    @include button-styles();
+    background-image: $phoneIcon;
+  }
 }

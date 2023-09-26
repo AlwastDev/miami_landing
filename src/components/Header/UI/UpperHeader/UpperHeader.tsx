@@ -3,9 +3,9 @@ import styles from './UpperHeader.module.scss';
 const UpperHeader = () => {
   return (
     <div className={styles.upperHeader}>
-      <button className={styles.burgerButton} />
-      <img className={styles.logoImg} alt="logoMiami" />
-      <button className={styles.phoneButton} />
+      <button className={styles.upperHeader__burgerButton} />
+      <img className={styles.upperHeader__logoImg} alt="logoMiami" />
+      <button className={styles.upperHeader__phoneButton} />
     </div>
   );
 };

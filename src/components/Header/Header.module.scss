@@ -1,15 +1,18 @@
 $background: url('/public/bgHeaderMiami.svg');
 
-.background {
+.header {
   background-image: $background;
   background-size: cover;
   background-position: 50%;
-}
 
-.contentHeader {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100vh;
-  padding: 24px 0 80px 0;
+  &__body {
+    display: flex;
+    max-width: 1020px;
+    margin: 0 auto;
+    text-align: center;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    padding: 24px 0 80px 0;
+  }
 }

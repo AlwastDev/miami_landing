@@ -1,30 +1,33 @@
 @import 'src/static/colors.scss';
 @import 'src/static/typography.scss';
 
-.contentWrapper {
+.basicInformation {
   display: flex;
+  max-width: 1020px;
+  margin: 0 auto;
   text-align: left;
-}
 
-.content {
-  width: 50%;
-}
+  &__leftContent,
+  &__rightContent {
+    width: 50%;
+  }
 
-.textLeft {
-  @include h2();
-  color: $black;
+  &__mainTitle {
+    @include h2();
+    color: $black;
 
-  span {
+    span {
+      color: $blue;
+    }
+  }
+
+  &__subTitle {
+    @include h3();
     color: $blue;
   }
-}
 
-.textRightUpper {
-  @include h3();
-  color: $blue;
-}
-
-.textRightLower {
-  @include body();
-  color: $gray;
+  &__description {
+    @include body();
+    color: $gray;
+  }
 }

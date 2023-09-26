@@ -5,46 +5,54 @@ $photo1: url('/public/photos/photo1.png');
 $photo2: url('/public/photos/photo2.png');
 $photo3: url('/public/photos/photo3.png');
 
-.grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-column-gap: 24px;
-  margin-top: 56px;
-}
-
-img {
+@mixin avatar-styles{
   border-radius: 50%;
 }
 
-.grid_img_item1 {
-  content: $photo1;
-}
-
-.grid_img_item2 {
-  content: $photo2;
-}
-
-.grid_img_item3 {
-  content: $photo3;
-}
-
-.title {
-  @include h3();
-  margin-top: 32px;
+.testimonials {
+  max-width: 1020px;
+  margin: 0 auto;
   text-align: center;
-  color: $blue;
-}
 
-.positionText {
-  @include small();
-  margin: 4px 0 4px 0;
-  color: $grayLight;
-  text-align: center;
-}
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 24px;
+    margin-top: 56px;
+  }
 
-.descriptionText {
-  @include body();
-  color: $gray;
-  text-align: center;
-}
+  &__avatar1 {
+    @include avatar-styles();
+    content: $photo1;
+  }
 
+  &__avatar2 {
+    @include avatar-styles();
+    content: $photo2;
+  }
+
+  &__avatar3 {
+    @include avatar-styles();
+    content: $photo3;
+  }
+
+  &__title {
+    @include h3();
+    margin-top: 32px;
+    text-align: center;
+    color: $blue;
+  }
+
+  &__position {
+    @include small();
+    margin: 4px 0;
+    color: $grayLight;
+    text-align: center;
+  }
+
+  &__description {
+    @include body();
+    color: $gray;
+    text-align: center;
+  }
+}

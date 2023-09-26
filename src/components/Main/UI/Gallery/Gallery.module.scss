@@ -8,78 +8,91 @@ $gallery4: url('/public/gallery/gallery4.jpeg');
 $gallery5: url('/public/gallery/gallery5.jpeg');
 $gallery6: url('/public/gallery/gallery6.jpeg');
 
-.gridGallery1 {
+@mixin gallery-styles($columns, $marginTop) {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: $columns;
   grid-column-gap: 24px;
-  margin-top: 56px;
+  margin-top: $marginTop;
 }
 
-.gridGallery2 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-column-gap: 24px;
-  margin-top: 40px;
-}
-
-.gridGallery3 {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  grid-column-gap: 24px;
-  margin-top: 40px;
-}
-
-.gallery {
+@mixin gallery-item-styles {
   height: 256px;
   border-radius: 8px;
   width: 100%;
   object-fit: cover;
 }
 
-.gallery_item1 {
-  content: $gallery1;
-}
+.gallery {
+  max-width: 1020px;
+  margin: 0 auto;
+  text-align: center;
 
-.gallery_item2 {
-  content: $gallery2;
-}
+  &__row1 {
+    @include gallery-styles(2fr 1fr, 56px);
+  }
 
-.gallery_item3 {
-  content: $gallery3;
-}
+  &__row2 {
+    @include gallery-styles(1fr 1fr, 40px);
+  }
 
-.gallery_item4 {
-  content: $gallery4;
-}
+  &__row3 {
+    @include gallery-styles(1fr 2fr, 40px);
+  }
 
-.gallery_item5 {
-  content: $gallery5;
-}
+  &__item1 {
+    @include gallery-item-styles();
+    content: $gallery1;
+  }
 
-.gallery_item6 {
-  content: $gallery6;
-}
+  &__item2 {
+    @include gallery-item-styles();
+    content: $gallery2;
+  }
 
-.text {
-  @include body();
-  margin-top: 24px;
-  color: $gray;
-  text-align: left;
+  &__item3 {
+    @include gallery-item-styles();
+    content: $gallery3;
+  }
 
-  span {
+  &__item4 {
+    @include gallery-item-styles();
+    content: $gallery4;
+  }
+
+  &__item5 {
+    @include gallery-item-styles();
+    content: $gallery5;
+  }
+
+  &__item6 {
+    @include gallery-item-styles();
+    content: $gallery6;
+  }
+
+  &__location {
+    @include body();
+    margin-top: 24px;
+    color: $gray;
+    text-align: left;
+
+    &__last {
+      margin-bottom: 32px;
+    }
+
+    span {
+      color: $blue;
+    }
+  }
+
+  &__viewButton {
+    @include bodyBold();
+    cursor: pointer;
+    width: 150px;
+    height: 56px;
+    border: $blue solid 2px;
+    border-radius: 8px;
+    background: transparent;
     color: $blue;
   }
 }
 
-.button {
-  @include bodyBold();
-  cursor: pointer;
-  width: 150px;
-  height: 56px;
-  flex-shrink: 0;
-  border: $blue solid 2px;
-  border-radius: 8px;
-  background: transparent;
-  color: $blue;
-  text-align: center;
-}
