@@ -1,4 +1,5 @@
 import styles from './BasicInformation.module.scss';
+import { scrollUp } from '../../../../static/smoothScrollUp.ts';
 
 const BasicInformation = () => {
   return (
@@ -7,7 +8,7 @@ const BasicInformation = () => {
         <div className={styles.basicInformation__leftContent}>
           <h2 className={styles.basicInformation__mainTitle}>
             Miami's Finest <br /> Real Estate <br />
-            <span>Here</span>
+            <span onClick={() => scrollUp()}>Here</span>
           </h2>
         </div>
         <div className={styles.basicInformation__rightContent}>

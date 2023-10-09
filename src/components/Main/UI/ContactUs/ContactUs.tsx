@@ -9,18 +9,22 @@ const ContactUs = () => {
         <div className={`${styles.contactUs__section} ${styles.contactUs__leftContent}`}>
           <div>
             <p className={styles.contactUs__sectionTitle}>Phone</p>
-            <p className={styles.contactUs__sectionText}>+1 234 5555-55-55</p>
+            <a href={'tel:+1 234 5555-55-55'} className={styles.contactUs__sectionText}>
+              +1 234 5555-55-55
+            </a>
           </div>
           <div className={styles.contactUs__leftContent__email}>
             <p className={styles.contactUs__sectionTitle}>Email</p>
-            <p className={styles.contactUs__sectionText}>hello@miami.com</p>
+            <a href={'mailto:hello@miami.com'} className={styles.contactUs__sectionText}>
+              hello@miami.com
+            </a>
           </div>
         </div>
         <div className={`${styles.contactUs__section} ${styles.contactUs__leftContent}`}>
           <p className={styles.contactUs__sectionTitle}>Address</p>
-          <p className={styles.contactUs__sectionText}>
+          <a href={'https://goo.gl/maps/DfAPeeYo19cSJbKT7'} target={'_blank'} className={styles.contactUs__sectionText}>
             400 first ave. n. <br /> suite 700 Minneapolis, MN 55401
-          </p>
+          </a>
         </div>
         <div className={styles.contactUs__rightContent}>
           <input type="text" className={styles.contactUs__rightContent__nameInput} placeholder={'Name'} />

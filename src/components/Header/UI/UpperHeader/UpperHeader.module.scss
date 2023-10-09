@@ -1,32 +1,69 @@
+@import "src/static/colors.scss";
+@import "src/static/typography.scss";
+@import "src/static/icon.scss";
+
 $burgerIcon: url('/public/burgerMenuIcon.svg');
+$burgerHoverIcon: url('/public/burgerHoverMenuIcon.svg');
 $phoneIcon: url('/public/phoneIcon.svg');
 $logoMiami: url('/public/logoMiami.svg');
 
 @mixin button-styles() {
+  @include icon-styles();
   background-color: transparent;
-  border: none;
-  appearance: none;
-  width: 32px;
-  height: 32px;
   cursor: pointer;
 }
 
 .upperHeader {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
   align-items: center;
+  justify-content: center;
+  //position: relative;
 
   &__burgerButton {
     @include button-styles();
+    justify-self: start;
     background-image: $burgerIcon;
+    transition: all .4s;
+
+    &:hover {
+      background-image: $burgerHoverIcon;
+    }
   }
 
   &__logoImg {
+    justify-self: center;
     content: $logoMiami;
   }
 
-  &__phoneButton {
-    @include button-styles();
-    background-image: $phoneIcon;
+  &__phoneNumber {
+    justify-self: end;
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    &__text {
+      @include smallBold();
+      color: $white;
+      display: block;
+      text-transform: uppercase;
+      margin-right: 20px;
+      width: max-content;
+      opacity: 0;
+      left: 0;
+      top: 0;
+    }
+
+    &__button {
+      @include button-styles();
+      background-image: $phoneIcon;
+      background-repeat: no-repeat;
+    }
+
+    &:hover &__text {
+      transition: opacity .3s;
+      opacity: 1;
+    }
   }
 }
+

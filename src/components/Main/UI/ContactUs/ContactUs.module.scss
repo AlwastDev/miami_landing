@@ -3,12 +3,16 @@
 
 @mixin input-styles {
   @include small();
-  border: transparent;
+  border: 2px solid transparent;
   border-radius: 8px;
   padding: 14px 0 14px 17px;
   background: $grayLight2;
   color: $grayDark;
   height: 48px;
+
+  &:hover {
+    border-color: $grayLight;
+  }
 }
 
 .contactUs {
@@ -29,6 +33,7 @@
     &Text {
       @include body();
       color: $gray;
+      text-decoration: none;
     }
   }
 
@@ -56,12 +61,7 @@
     }
 
     &__messageTextArea {
-      @include small();
-      border: transparent;
-      border-radius: 8px;
-      padding: 14px 0 0 17px;
-      background: $grayLight2;
-      color: $grayDark;
+      @include input-styles;
       height: 144px;
       resize: none;
     }
@@ -74,6 +74,11 @@
       background: $blueLight;
       color: $white;
       cursor: pointer;
+      transition: all .3s;
+
+      &:hover {
+        box-shadow: 0 13px 27px $darkBlueRgb;
+      }
     }
   }
 }

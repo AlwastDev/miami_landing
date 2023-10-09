@@ -45,3 +45,11 @@
   font-weight: 400;
   line-height: 27px;
 }
+
+@mixin smallBold {
+  @include typography-style();
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 27px;
+  letter-spacing: 2px;
+}

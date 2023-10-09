@@ -20,6 +20,11 @@ $gallery6: url('/public/gallery/gallery6.jpeg');
   border-radius: 8px;
   width: 100%;
   object-fit: cover;
+  transition: transform .3s;
+
+  &:hover {
+    transform: scale(1.05);
+  }
 }
 
 .gallery {
@@ -79,8 +84,10 @@ $gallery6: url('/public/gallery/gallery6.jpeg');
       margin-bottom: 32px;
     }
 
-    span {
+    a {
+      @include bodyBold();
       color: $blue;
+      text-decoration: none;
     }
   }
 
@@ -93,6 +100,13 @@ $gallery6: url('/public/gallery/gallery6.jpeg');
     border-radius: 8px;
     background: transparent;
     color: $blue;
+    transition: all .3s;
+
+    &:hover {
+      background-color: $blueLight;
+      color: $white;
+      box-shadow: 0 13px 27px $darkBlueRgb;
+    }
   }
 }
 
