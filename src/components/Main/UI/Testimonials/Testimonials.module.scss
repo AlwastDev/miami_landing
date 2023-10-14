@@ -1,5 +1,6 @@
 @import "src/static/colors.scss";
 @import "src/static/typography.scss";
+@import "src/static/screens.scss";
 
 $photo1: url('/public/photos/photo1.png');
 $photo2: url('/public/photos/photo2.png');
@@ -18,6 +19,11 @@ $photo3: url('/public/photos/photo3.png');
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: 24px;
+
+    @media screen and (max-width: $tablet) {
+      display: flex;
+      flex-direction: column;
+    }
   }
 
   &__avatar1 {
@@ -28,11 +34,19 @@ $photo3: url('/public/photos/photo3.png');
   &__avatar2 {
     @include avatar-styles();
     content: $photo2;
+
+    @media screen and (max-width: $tablet) {
+      margin-top: 48px;
+    }
   }
 
   &__avatar3 {
     @include avatar-styles();
     content: $photo3;
+
+    @media screen and (max-width: $tablet) {
+      margin-top: 48px;
+    }
   }
 
   &__title {

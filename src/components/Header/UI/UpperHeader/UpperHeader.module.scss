@@ -1,6 +1,7 @@
 @import "src/static/colors.scss";
 @import "src/static/typography.scss";
 @import "src/static/icon.scss";
+@import 'src/static/screens.scss';
 
 $burgerIcon: url('/public/burgerMenuIcon.svg');
 $burgerHoverIcon: url('/public/burgerHoverMenuIcon.svg');
@@ -18,7 +19,6 @@ $logoMiami: url('/public/logoMiami.svg');
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
   justify-content: center;
-  //position: relative;
 
   &__burgerButton {
     @include button-styles();
@@ -66,4 +66,3 @@ $logoMiami: url('/public/logoMiami.svg');
     }
   }
 }
-

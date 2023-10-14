@@ -1,5 +1,6 @@
 @import "src/static/colors.scss";
 @import "src/static/typography.scss";
+@import "src/static/screens.scss";
 
 $gallery1: url('/public/gallery/gallery1.jpeg');
 $gallery2: url('/public/gallery/gallery2.jpeg');
@@ -13,6 +14,10 @@ $gallery6: url('/public/gallery/gallery6.jpeg');
   grid-template-columns: $columns;
   grid-column-gap: 24px;
   margin-top: $marginTop;
+
+  @media screen and (max-width: $tablet) {
+    grid-column-gap: 20px;
+  }
 }
 
 @mixin gallery-item-styles {
@@ -21,6 +26,10 @@ $gallery6: url('/public/gallery/gallery6.jpeg');
   width: 100%;
   object-fit: cover;
   transition: transform .3s;
+
+  @media screen and (max-width: $tablet) {
+    height: 131px;
+  }
 
   &:hover {
     transform: scale(1.05);
@@ -32,16 +41,32 @@ $gallery6: url('/public/gallery/gallery6.jpeg');
   margin: 0 auto;
   text-align: center;
 
+  @media screen and (max-width: $tablet) {
+    margin: 0 20px 0 20px;
+  }
+
   &__row1 {
     @include gallery-styles(2fr 1fr, 0);
+
+    @media screen and (max-width: $tablet) {
+      @include gallery-styles(1fr 1fr, 0);
+    }
   }
 
   &__row2 {
     @include gallery-styles(1fr 1fr, 40px);
+
+    @media screen and (max-width: $tablet) {
+      @include gallery-styles(1fr 1fr, 32px);
+    }
   }
 
   &__row3 {
     @include gallery-styles(1fr 2fr, 40px);
+
+    @media screen and (max-width: $tablet) {
+      @include gallery-styles(1fr 1fr, 32px);
+    }
   }
 
   &__item1 {

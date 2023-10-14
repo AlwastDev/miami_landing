@@ -39,6 +39,15 @@
   line-height: 27px;
 }
 
+@mixin bodyBold2 {
+  @include typography-style();
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 22px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
 @mixin small {
   @include typography-style();
   font-size: 14px;
@@ -51,5 +60,13 @@
   font-size: 14px;
   font-weight: 700;
   line-height: 27px;
+  letter-spacing: 2px;
+}
+
+@mixin smallBold2 {
+  @include typography-style();
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16px;
   letter-spacing: 2px;
 }

@@ -7,3 +7,8 @@
 section {
     margin-top: 104px;
 }
+
+a {
+    text-decoration: none;
+    color: inherit;
+}

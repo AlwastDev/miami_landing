@@ -1,5 +1,6 @@
 @import 'src/static/colors.scss';
 @import 'src/static/typography.scss';
+@import 'src/static/screens.scss';
 
 @mixin input-styles {
   @include small();
@@ -22,6 +23,13 @@
   grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 111px;
 
+  @media screen and (max-width: $tablet) {
+    display: flex;
+    flex-direction: column;
+    margin: 0 20px 0 20px;
+    align-items: center;
+  }
+
   &__section {
     text-align: left;
 
@@ -42,6 +50,10 @@
     flex-direction: column;
     width: 150px;
 
+    @media screen and (max-width: $tablet) {
+      margin-top: 24px;
+    }
+
     &__email {
       margin-top: 24px;
     }
@@ -51,6 +63,11 @@
     display: grid;
     grid-row-gap: 16px;
     width: 411px;
+
+    @media screen and (max-width: $tablet) {
+      width: 280px;
+      margin-top: 32px;
+    }
 
     &__nameInput {
       @include input-styles;

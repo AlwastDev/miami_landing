@@ -1,3 +1,5 @@
+@import 'src/static/screens.scss';
+
 $background: url('/public/bgFooterMiami.jpg');
 $logoMiami: url('/public/logoMiami.svg');
 
@@ -12,6 +14,10 @@ $logoMiami: url('/public/logoMiami.svg');
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
+
+  @media screen and (max-width: $tablet) {
+    height: 206px;
+  }
 
   &__logo {
     content: $logoMiami;

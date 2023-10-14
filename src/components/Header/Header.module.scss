@@ -1,4 +1,11 @@
+@import "src/static/colors.scss";
+@import "src/static/typography.scss";
+@import "src/static/icon.scss";
+@import 'src/static/screens.scss';
+
 $background: url('/public/bgHeaderMiami.svg');
+$close: url('/public/closeIcon.svg');
+$logoMiami: url('/public/logoMiami.svg');
 
 .header {
   background-image: $background;
@@ -14,5 +21,130 @@ $background: url('/public/bgHeaderMiami.svg');
     justify-content: space-between;
     height: 100vh;
     padding: 24px 0 80px 0;
+
+    @media screen and (max-width: $tablet) {
+      margin: 0 20px 0 20px;
+    }
   }
 }
+
+.menuOpen {
+  transform: translateX(0);
+  opacity: 1;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.menuClosed {
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.sideMenu {
+  background: $blue;
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  padding-top: 24px;
+
+  &__content {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    z-index: 4;
+    position: relative;
+
+    &__top {
+      display: grid;
+      grid-template-columns: 152px 1fr;
+      align-items: center;
+
+      @media screen and (max-width: $tablet) {
+        grid-template-columns: 44px 1fr;
+      }
+    }
+
+    &__closeButton {
+      @include icon-styles();
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      background-image: $close;
+      width: 32px;
+      height: 32px;
+      justify-self: flex-end;
+    }
+
+    &__logo {
+      display: block;
+      content: $logoMiami;
+      justify-self: center;
+    }
+
+    &__menu {
+      @include bodyBold2();
+      text-transform: uppercase;
+      list-style-type: none;
+      color: $white;
+      margin: 48px 0 0 120px;
+
+      @media screen and (max-width: $tablet) {
+        margin: 48px 0 0 20px;
+      }
+    }
+
+    &__menuItem {
+      cursor: pointer;
+      margin-bottom: 32px;
+
+      &:last-child {
+        margin-bottom: 48px;
+      }
+    }
+
+    &__link {
+      padding-bottom: 8px;
+      border-bottom: 1px solid transparent;
+
+      transition: border-color 0.3s;
+
+      &:hover {
+        border-color: $white;
+      }
+    }
+
+    &__contactInfo {
+      @include smallBold2();
+      display: flex;
+      flex-direction: column;
+      color: $white;
+      margin-left: 120px;
+
+      @media screen and (max-width: $tablet) {
+        margin-left: 20px;
+      }
+    }
+
+    &__phoneNumber {
+      margin-bottom: 16px;
+    }
+
+    &__callToOrder {
+      cursor: pointer;
+      width: fit-content;
+      padding-bottom: 8px;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.3s;
+
+      &:hover {
+        border-color: $white;
+      }
+    }
+  }
+}
+
