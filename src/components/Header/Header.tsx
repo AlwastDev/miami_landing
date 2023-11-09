@@ -19,7 +19,9 @@ const Header: FC = () => {
         <nav className={`${styles.sideMenu} ${menuClass}`}>
           <div className={styles.sideMenu__content}>
             <div className={styles.sideMenu__content__top}>
-              <button className={styles.sideMenu__content__closeButton} onClick={handleBurgerMenu} />
+              <button className={styles.sideMenu__content__closeButton} onClick={handleBurgerMenu}>
+                Close menu
+              </button>
               <img className={styles.sideMenu__content__logo} alt={'logo'} />
             </div>
             <ul className={styles.sideMenu__content__menu}>

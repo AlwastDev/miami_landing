@@ -26,12 +26,19 @@ const ContactUs = () => {
             400 first ave. n. <br /> suite 700 Minneapolis, MN 55401
           </a>
         </div>
-        <div className={styles.contactUs__rightContent}>
-          <input type="text" className={styles.contactUs__rightContent__nameInput} placeholder={'Name'} />
-          <input type="email" className={styles.contactUs__rightContent__emailInput} placeholder={'Email'} />
-          <textarea className={styles.contactUs__rightContent__messageTextArea} placeholder={'Message'} />
+        <form className={styles.contactUs__rightContent}>
+          <label htmlFor="name" aria-label="Name"></label>
+          <input type="text" id="name" className={styles.contactUs__rightContent__nameInput} placeholder="Name" />
+          <label htmlFor="email" aria-label="Email"></label>
+          <input type="email" id="email" className={styles.contactUs__rightContent__emailInput} placeholder="Email" />
+          <label htmlFor="message" aria-label="Message"></label>
+          <textarea
+            id="message"
+            className={styles.contactUs__rightContent__messageTextArea}
+            placeholder="Message"
+          ></textarea>
           <button className={styles.contactUs__rightContent__consultationButton}>Consultation</button>
-        </div>
+        </form>
       </div>
     </section>
   );

@@ -58,6 +58,7 @@ $logoMiami: url('/public/logoMiami.svg');
       @include button-styles();
       background-image: $phoneIcon;
       background-repeat: no-repeat;
+      color: transparent;
     }
 
     &:hover &__text {

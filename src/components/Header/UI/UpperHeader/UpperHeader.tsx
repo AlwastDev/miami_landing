@@ -16,8 +16,10 @@ const UpperHeader: FC<UpperHeaderProps> = ({ handleBurgerMenu }) => {
         <a className={styles.upperHeader__burgerButton} onClick={handleBurgerMenu} />
         <img className={styles.upperHeader__logoImg} alt="logoMiami" />
         <div className={styles.upperHeader__phoneNumber}>
-          {windowWidth > tablet && <a className={styles.upperHeader__phoneNumber__text}>+1 123 555-55-55</a>}
-          <a className={styles.upperHeader__phoneNumber__button} href="tel: +1 123 555-55-55" />
+          {windowWidth > tablet && <p className={styles.upperHeader__phoneNumber__text}>+1 123 555-55-55</p>}
+          <a className={styles.upperHeader__phoneNumber__button} href="tel: +1 123 555-55-55">
+            +1 123 555-55-55
+          </a>
         </div>
       </div>
     </>
