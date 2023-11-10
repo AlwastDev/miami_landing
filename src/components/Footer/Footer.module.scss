@@ -1,7 +1,7 @@
-@import 'src/static/screens.scss';
+@import '@static/screens.scss';
 
-$background: url('/public/bgFooterMiami.jpg');
-$logoMiami: url('/public/logoMiami.svg');
+$background: url('@assets/bgFooterMiami.jpg');
+$logoMiami: url('@assets/logoMiami.svg');
 
 .footer {
   background-image: $background;

@@ -1,11 +1,11 @@
-@import "src/static/colors.scss";
-@import "src/static/typography.scss";
-@import "src/static/icon.scss";
-@import 'src/static/screens.scss';
+@import "@static/colors.scss";
+@import "@static/typography.scss";
+@import "@static/icon.scss";
+@import '@static/screens.scss';
 
-$background: url('/public/bgHeaderMiami.svg');
-$close: url('/public/closeIcon.svg');
-$logoMiami: url('/public/logoMiami.svg');
+$background: url('@assets/bgHeaderMiami.svg');
+$close: url('@assets/closeIcon.svg');
+$logoMiami: url('@assets/logoMiami.svg');
 
 .header {
   background-image: $background;

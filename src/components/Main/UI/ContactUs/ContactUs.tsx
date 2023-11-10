@@ -1,5 +1,5 @@
 import styles from './ContactUs.module.scss';
-import { Title } from '../../../../UI';
+import { Title } from '@UI/index.ts';
 
 const ContactUs = () => {
   return (

@@ -1,5 +1,5 @@
 import styles from './BasicInformation.module.scss';
-import { scrollUp } from '../../../../static/smoothScrollUp.ts';
+import { scrollUp } from '@static/smoothScrollUp.ts';
 
 const BasicInformation = () => {
   return (

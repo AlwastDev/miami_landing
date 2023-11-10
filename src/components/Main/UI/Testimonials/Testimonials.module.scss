@@ -1,10 +1,10 @@
-@import "src/static/colors.scss";
-@import "src/static/typography.scss";
-@import "src/static/screens.scss";
+@import "@static/colors.scss";
+@import "@static/typography.scss";
+@import "@static/screens.scss";
 
-$photo1: url('/public/photos/photo1.png');
-$photo2: url('/public/photos/photo2.png');
-$photo3: url('/public/photos/photo3.png');
+$photo1: url('@assets/photos/photo1.png');
+$photo2: url('@assets/photos/photo2.png');
+$photo3: url('@assets/photos/photo3.png');
 
 @mixin avatar-styles{
   border-radius: 50%;

@@ -1,7 +1,7 @@
 import styles from './UpperHeader.module.scss';
 import { FC } from 'react';
-import useWindowWidth from '../../../../hooks/useWindowWidth.ts';
-import { tablet } from '../../../../static/screens.ts';
+import useWindowWidth from '@hooks/useWindowWidth.ts';
+import { tablet } from '@static/screens.ts';
 
 interface UpperHeaderProps {
   handleBurgerMenu: () => void;

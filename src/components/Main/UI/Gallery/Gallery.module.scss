@@ -1,13 +1,13 @@
-@import "src/static/colors.scss";
-@import "src/static/typography.scss";
-@import "src/static/screens.scss";
+@import "@static/colors.scss";
+@import "@static/typography.scss";
+@import "@static/screens.scss";
 
-$gallery1: url('/public/gallery/gallery1.jpeg');
-$gallery2: url('/public/gallery/gallery2.jpeg');
-$gallery3: url('/public/gallery/gallery3.jpeg');
-$gallery4: url('/public/gallery/gallery4.jpeg');
-$gallery5: url('/public/gallery/gallery5.jpeg');
-$gallery6: url('/public/gallery/gallery6.jpeg');
+$gallery1: url('@assets/gallery/gallery1.jpeg');
+$gallery2: url('@assets/gallery/gallery2.jpeg');
+$gallery3: url('@assets/gallery/gallery3.jpeg');
+$gallery4: url('@assets/gallery/gallery4.jpeg');
+$gallery5: url('@assets/gallery/gallery5.jpeg');
+$gallery6: url('@assets/gallery/gallery6.jpeg');
 
 @mixin gallery-styles($columns, $marginTop) {
   display: grid;

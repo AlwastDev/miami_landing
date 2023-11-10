@@ -1,7 +1,7 @@
-@import "src/static/colors.scss";
-@import "src/static/typography.scss";
+@import "@static/colors.scss";
+@import "@static/typography.scss";
 
-$coronaIcon: url('/public/coronaIcon.svg');
+$coronaIcon: url('@assets/coronaIcon.svg');
 
 .title {
   text-align: center;

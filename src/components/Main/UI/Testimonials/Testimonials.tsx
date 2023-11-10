@@ -1,5 +1,5 @@
 import styles from './Testimonials.module.scss';
-import { Title } from '../../../../UI';
+import { Title } from '@UI/index.ts';
 
 const Testimonials = () => {
   return (
